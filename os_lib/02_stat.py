@@ -7,6 +7,10 @@ if len(sys.argv) == 1:
 else:
     filename = sys.argv[1]
 
+# fd = os.open('test_file.txt', flags=os.O_RDONLY)
+# stat_info = os.stat(fd)
+# os.close(fd)
+
 stat_info = os.stat(filename, follow_symlinks=False)
 
 print(f'os.stat({filename}):')
