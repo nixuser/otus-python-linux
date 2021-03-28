@@ -7,6 +7,8 @@ if len(sys.argv) == 1:
 else:
     filename = sys.argv[1]
 
+# python3 -c 'import os ; print(os.stat in os.supports_fd)'
+
 # fd = os.open('test_file.txt', flags=os.O_RDONLY)
 # stat_info = os.stat(fd)
 # os.close(fd)
