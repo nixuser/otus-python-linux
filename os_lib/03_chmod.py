@@ -22,6 +22,6 @@ else:
 
 os.chmod(filename, new_permissions)
 
-print('Readable:', os.access(filename, os.R_OK))
-print('Writable:', os.access(filename, os.W_OK))
-print('Executable:', os.access(filename, os.X_OK))
+print('Readable:', os.access(filename, mode=os.R_OK))
+print('Writable:', os.access(filename, mode=os.W_OK))
+print('Executable:', os.access(filename, mode=os.X_OK))
