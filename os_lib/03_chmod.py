@@ -7,6 +7,8 @@ if len(sys.argv) == 1:
 else:
     filename = sys.argv[1]
 
+# python3 -c 'import os ; print(os.chmod in os.supports_fd)'
+
 # Determine what permissions are already set using stat
 permissions = stat.S_IMODE(os.stat(filename).st_mode)
 
