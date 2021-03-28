@@ -7,7 +7,7 @@ if len(sys.argv) == 1:
 else:
     filename = sys.argv[1]
 
-stat_info = os.stat(filename)
+stat_info = os.stat(filename, follow_symlinks=False)
 
 print(f'os.stat({filename}):')
 print(f'  Size: {stat_info.st_size}')  # in bytes
