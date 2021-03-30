@@ -9,7 +9,7 @@ else:
 
 # python3 -c 'import os ; print(os.stat in os.supports_fd)'
 
-# fd = os.open('test_file.txt', flags=os.O_RDONLY)
+# fd = os.open(filename, flags=os.O_RDONLY)
 # stat_info = os.stat(fd)
 # os.close(fd)
 
