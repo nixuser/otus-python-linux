@@ -11,9 +11,9 @@ def foo():
         print('Try call bar')
         bar()
     except SystemExit as e:
-        print(f"Handle {e}")
+        print(f'Handle {e}')
     finally:
-        print("Finally exit from foo")
+        print('Finally exit from foo')
 
 
 def bar_se():
@@ -26,9 +26,9 @@ def foo_se():
         print('Try call bar_se')
         bar_se()
     except SystemExit as e:
-        print(f"Handle {e}")
+        print(f'Handle {e}')
     finally:
-        print("Finally exit from foo_se")
+        print('Finally exit from foo_se')
 
 
 if __name__ == '__main__':
