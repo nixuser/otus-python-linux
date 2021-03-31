@@ -48,5 +48,5 @@ if __name__ == '__main__':
     # exit_code_non_zero()
     # capture_err_and_out()
     # capture_err_and_out_2()
-    # timeout_example()
+    # timeout()
     # shell()
