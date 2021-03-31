@@ -1,11 +1,11 @@
 from subprocess import (
-    check_call, check_output,
+    call, check_call, check_output,
     STDOUT
 )
 
 
-def check_example():
-    pass
+def call_example():
+    assert call(["ls", "-l"]) == 0
 
 
 def check_call_example():
@@ -35,7 +35,7 @@ def check_output_str_to_stdin():
 
 
 if __name__ == '__main__':
-    check_example()
+    call_example()
     # check_call_example()
     # check_output_example()
     # check_output_stderr_to_stdout()
