@@ -4,13 +4,14 @@ from subprocess import (
 
 
 def popen_ex():
-    proc = Popen(
-        ["sleep", "120"],
-        stdout=PIPE
-    )
-    poll_result = proc.poll()
-    proc.communicate()
-    print('stdout:', repr(poll_result))
+    proc = Popen(["sleep", "90"], stdout=PIPE, stderr=PIPE)
+    # Set and return returncode attribute. Otherwise, returns None.
+    result = proc.poll()
+    # Wait for process to terminate and set the returncode attribute.
+    # Returns a tuple (stdout_data, stderr_data).
+    # result = proc.communicate()
+    print('return code:', repr(proc.returncode))
+    print('result:', repr(result))
 
 
 if __name__ == '__main__':
