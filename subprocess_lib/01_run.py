@@ -32,7 +32,7 @@ def capture_err_and_out_2():
 
 def timeout():
     # Using timeout
-    result = run(["sleep", "5"], timeout=6)
+    result = run(["sleep", "1"], timeout=2)
     print(result.returncode)
 
 
