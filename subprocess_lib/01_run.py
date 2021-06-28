@@ -11,11 +11,6 @@ def run_example():
     print(result.stderr)
 
 
-def exit_code_non_zero():
-    # If check is True and the exit code was non-zero, it raises a CalledProcessError
-    run(["false"], check=True)
-
-
 def capture_err_and_out():
     # Capture standard error and standard output in the result
     result = run(["ls", "-l"], stderr=PIPE, stdout=PIPE)
@@ -28,6 +23,11 @@ def capture_err_and_out_2():
     result = run(["ls", "-l"], capture_output=True)
     print(result.stderr)
     print(result.stdout)
+
+
+def exit_code_non_zero():
+    # If check is True and the exit code was non-zero, it raises a CalledProcessError
+    run(["false"], check=True)
 
 
 def timeout():
@@ -45,8 +45,8 @@ def shell():
 
 if __name__ == '__main__':
     run_example()
-    # exit_code_non_zero()
     # capture_err_and_out()
     # capture_err_and_out_2()
+    # exit_code_non_zero()
     # timeout()
     # shell()
